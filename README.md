@@ -5,7 +5,7 @@ No particular order or path.
 
 I add things as I discover them. 
 
-# OPTIONAL CHAINING (ES2020)
+# OPTIONAL CHAINING
 
 "Shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining))
 
@@ -34,7 +34,7 @@ if (person?.socialMedia?.twitter) {
 console.log(person?.socialMedia?.twitter);
 ```
 
-# NULLISH COALESCING OPERATOR (ES2020)
+# NULLISH COALESCING OPERATOR
 
 "The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator))
 
@@ -62,4 +62,38 @@ console.log(name ?? 'No name assigned'); // Outputs 'No name assigned'
 let name = 'Catalin Pit';
 
 console.log(name ?? 'No name assigned'); // Outputs 'Catalin Pit'
+```
+
+# MERGE OBJECTS TOGETHER - SPREAD OPERATOR
+
+"Shallow-cloning (excluding prototype) or merging of objects is now possible using a shorter syntax than Object.assign()." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
+
+```
+const user = {
+  name: "Catalin Pit",
+  role: "Junior Fullstack Developer",
+  age: 23
+};
+
+const uses = {
+  machine: "MacBook Pro 15 inch",
+  editor: "VS Code",
+  language: "JavaScript",
+  phone: "Samsung Note 10"
+};
+
+const summary = {...user, ...uses};
+
+console.log(summary); 
+
+// Outputs //
+const summary = {
+  name: "Catalin Pit",
+  role: "Junior Fullstack Developer",
+  age: 23,
+  machine: "MacBook Pro 15 inch",
+  editor: "VS Code",
+  language: "JavaScript",
+  phone: "Samsung Note 10"
+}
 ```
