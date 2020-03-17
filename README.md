@@ -5,6 +5,11 @@ No particular order or path.
 
 I add things as I discover them. 
 
+# TABLE OF CONTENTS
+* [Optional Chaining](#optional-chaining)
+* [Nullish Coalescing Operator](#nullish-coalescing-operator)
+* [Merge Objects Together - Spread Operator](#merge-objects-together---spread-operator)
+
 # OPTIONAL CHAINING
 
 "Shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining))
