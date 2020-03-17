@@ -1,9 +1,11 @@
-# JS Tips And Tricks
+# JavaScript Tips And Tricks
 A collection of JavaScript tips and tricks.
 
 No particular order or path.
 
 I add things as I discover them. 
+
+*Check [Codinghub.tips](https://codinghub.tips/), too, for JavaScript tips. It's not my project but I like it.* 🔥
 
 # TABLE OF CONTENTS
 * [Optional Chaining](#optional-chaining)
