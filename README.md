@@ -58,7 +58,7 @@ const person = {
 };
 
 console.log(person.socialMedia.facebook ?? 'No Facebook account found!'); // Outputs 'No Facebook account found!'
-console.log(person.socialMedia.instagram ?? person.socialMedia.instagram); // Outputs '@catalinmpit'
+console.log(person.socialMedia.instagram ?? 'No Instagram account found!'); // Outputs '@catalinmpit'
 
 
 /// Another example ///
