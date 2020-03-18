@@ -8,9 +8,12 @@ I add things as I discover them.
 *Check [Codinghub.tips](https://codinghub.tips/), too, for JavaScript tips. It's not my project but I like it.* 🔥
 
 # TABLE OF CONTENTS
-* [Optional Chaining](#optional-chaining)
-* [Nullish Coalescing Operator](#nullish-coalescing-operator)
-* [Merge Objects Together - Spread Operator](#merge-objects-together---spread-operator)
+- [JavaScript Tips And Tricks](#javascript-tips-and-tricks)
+- [TABLE OF CONTENTS](#table-of-contents)
+- [OPTIONAL CHAINING](#optional-chaining)
+- [NULLISH COALESCING OPERATOR](#nullish-coalescing-operator)
+- [MERGE OBJECTS TOGETHER - SPREAD OPERATOR](#merge-objects-together---spread-operator)
+- [TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY](#two-ways-to-convert-a-string-to-a-character-array)
 
 # OPTIONAL CHAINING
 
@@ -103,4 +106,18 @@ const summary = {
   language: "JavaScript",
   phone: "Samsung Note 10"
 }
+```
+
+# TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY 
+
+These are two quick ways to convert your string to an array of characters.
+
+```
+const firstName = "Catalin";
+
+const firstNameArr1 = firstName.split('');
+console.log(firstNameArr1);
+
+const firstNameArr2 = [...firstName];
+console.log(firstNameArr2);
 ```
