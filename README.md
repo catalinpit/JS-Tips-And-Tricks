@@ -14,6 +14,7 @@ I add things as I discover them.
 - [NULLISH COALESCING OPERATOR](#nullish-coalescing-operator)
 - [MERGE OBJECTS TOGETHER - SPREAD OPERATOR](#merge-objects-together---spread-operator)
 - [TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY](#two-ways-to-convert-a-string-to-a-character-array)
+- [DEFAULT PARAMETERS](#default-parameters)
 
 # OPTIONAL CHAINING
 
@@ -120,4 +121,18 @@ console.log(firstNameArr1);
 
 const firstNameArr2 = [...firstName];
 console.log(firstNameArr2);
+```
+
+# DEFAULT PARAMETERS 
+
+"Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+
+```
+function add(x = 1, y = 2) {
+  return x + y;
+}
+
+add();       // Returns 3
+add(10);    // Returns 12
+add(5, 5); // Returns 10
 ```
