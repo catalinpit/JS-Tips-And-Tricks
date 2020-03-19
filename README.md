@@ -15,6 +15,7 @@ I add things as I discover them.
 - [MERGE OBJECTS TOGETHER - SPREAD OPERATOR](#merge-objects-together---spread-operator)
 - [TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY](#two-ways-to-convert-a-string-to-a-character-array)
 - [DEFAULT PARAMETERS](#default-parameters)
+- [FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES](#filter-unique-values--remove-duplicate-values)
 
 # OPTIONAL CHAINING
 
@@ -135,4 +136,23 @@ function add(x = 1, y = 2) {
 add();       // Returns 3
 add(10);    // Returns 12
 add(5, 5); // Returns 10
+```
+
+# FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES
+
+"Set objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Set's collection." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+```
+// Strings
+const names = ['Catalin', 'Catalin', 'Pit', 'Pit', 'Tom', 'Tom', 'John', 'John'];
+const uniqueNames = [...new Set(names)];
+
+console.log(uniqueNames); // Outputs ['Catalin', 'Pit', 'Tom', 'John']
+
+
+// Numbers
+const examScores = [50, 75, 100, 99, 95, 67, 43, 43, 43, 100, 99, 50, 50, 50, 50];
+const uniqueExamScores = [...new Set(examScores)];
+
+console.log(uniqueExamScores); // Outputs [50, 75, 100, 99, 95, 67, 43];
 ```
