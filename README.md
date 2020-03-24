@@ -1,4 +1,4 @@
-# JavaScript Tips And Tricks
+# JavaScript Tips And Tricks  🔥🚀⚡
 A collection of JavaScript tips and tricks.
 
 No particular order or path.
