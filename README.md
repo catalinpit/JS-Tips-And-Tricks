@@ -23,7 +23,7 @@ I add things as I discover them.
 
 "Shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining))
 
-```
+```js
 const person = {
   name: "Catalin Pit",
   socialMedia: {
@@ -52,7 +52,7 @@ console.log(person?.socialMedia?.twitter);
 
 "The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator))
 
-```
+```js
 const person = {
   name: "Catalin Pit",
   socialMedia: {
@@ -82,7 +82,7 @@ console.log(name ?? 'No name assigned'); // Outputs 'Catalin Pit'
 
 "Shallow-cloning (excluding prototype) or merging of objects is now possible using a shorter syntax than Object.assign()." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
 
-```
+```js
 const user = {
   name: "Catalin Pit",
   role: "Junior Fullstack Developer",
@@ -116,7 +116,7 @@ const summary = {
 
 These are two quick ways to convert your string to an array of characters.
 
-```
+```js
 const firstName = "Catalin";
 
 const firstNameArr1 = firstName.split('');
@@ -130,7 +130,7 @@ console.log(firstNameArr2);
 
 "Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters))
 
-```
+```js
 function add(x = 1, y = 2) {
   return x + y;
 }
@@ -144,7 +144,7 @@ add(5, 5); // Returns 10
 
 "Set objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Set's collection." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set))
 
-```
+```js
 // Strings
 const names = ['Catalin', 'Catalin', 'Pit', 'Pit', 'Tom', 'Tom', 'John', 'John'];
 const uniqueNames = [...new Set(names)];
@@ -163,7 +163,7 @@ console.log(uniqueExamScores); // Outputs [50, 75, 100, 99, 95, 67, 43];
 
 Remove falsy values such as `null, undefined, 0, boolean` and so on, from an array. 
 
-```
+```js
 const myArray = ["Catalin", 1, "Macbook", false, true, "Car", "Peace", 191, false];
 
 const filteredArray = myArray.filter(Boolean);
@@ -177,7 +177,7 @@ Default parameters allows us to require an argument to be passed to the function
 
 We can create a function which throws an error and assign it as default value for required parameters.
 
-```
+```js
 const required = () => {
     throw new TypeError("You did not pass the required argument!");
 };
