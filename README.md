@@ -16,6 +16,7 @@ I add things as I discover them.
 - [TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY](#two-ways-to-convert-a-string-to-a-character-array)
 - [DEFAULT PARAMETERS](#default-parameters)
 - [FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES](#filter-unique-values--remove-duplicate-values)
+- [FILTER OUT FALSY VALUES](#filter-out-falsy-values)
 
 # OPTIONAL CHAINING
 
@@ -155,4 +156,16 @@ const examScores = [50, 75, 100, 99, 95, 67, 43, 43, 43, 100, 99, 50, 50, 50, 50
 const uniqueExamScores = [...new Set(examScores)];
 
 console.log(uniqueExamScores); // Outputs [50, 75, 100, 99, 95, 67, 43];
+```
+
+# FILTER OUT FALSY VALUES
+
+Remove falsy values such as `null, undefined, 0, boolean` and so on, from an array. 
+
+```
+const myArray = ["Catalin", 1, "Macbook", false, true, "Car", "Peace", 191, false];
+
+const filteredArray = myArray.filter(Boolean);
+
+console.log(filteredArray) // Returns ["Catalin", 1, "Macbook", true, "Car", "Peace", 191]
 ```
