@@ -8,7 +8,7 @@ I add things as I discover them.
 *Check [Codinghub.tips](https://codinghub.tips/), too, for JavaScript tips. It's not my project but I like it.* 🔥
 
 # TABLE OF CONTENTS
-- [JavaScript Tips And Tricks](#javascript-tips-and-tricks)
+- [JavaScript Tips And Tricks  🔥🚀⚡](#javascript-tips-and-tricks-%f0%9f%94%a5%f0%9f%9a%80%e2%9a%a1)
 - [TABLE OF CONTENTS](#table-of-contents)
 - [OPTIONAL CHAINING](#optional-chaining)
 - [NULLISH COALESCING OPERATOR](#nullish-coalescing-operator)
@@ -17,6 +17,7 @@ I add things as I discover them.
 - [DEFAULT PARAMETERS](#default-parameters)
 - [FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES](#filter-unique-values--remove-duplicate-values)
 - [FILTER OUT FALSY VALUES](#filter-out-falsy-values)
+- [REQUIRED PARAMETERS](#required-parameters)
 
 # OPTIONAL CHAINING
 
@@ -168,4 +169,21 @@ const myArray = ["Catalin", 1, "Macbook", false, true, "Car", "Peace", 191, fals
 const filteredArray = myArray.filter(Boolean);
 
 console.log(filteredArray) // Returns ["Catalin", 1, "Macbook", true, "Car", "Peace", 191]
+```
+
+# REQUIRED PARAMETERS
+
+Default parameters allows us to require an argument to be passed to the function. 
+
+We can create a function which throws an error and assign it as default value for required parameters.
+
+```
+const required = () => {
+    throw new TypeError("You did not pass the required argument!");
+};
+
+const greet = (name = required()) => console.log(`Hello ${name}!`);
+
+greet() // Returns "Uncaught TypeError: You did not pass the required argument!"
+greet("Catalin Pit") // Returns "Hello Catalin Pit!"
 ```
