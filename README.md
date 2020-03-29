@@ -195,7 +195,7 @@ With the help of the spread syntax, we can now pass an empty parameter to a func
 
 "Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
 
-```
+```js
 function greet(fullName, instagramHandle, twitterHandle) {
     let message = `Hello, my name is ${fullName}.`;
 
