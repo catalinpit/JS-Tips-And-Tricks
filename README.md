@@ -18,6 +18,7 @@ I add things as I discover them.
 - [FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES](#filter-unique-values--remove-duplicate-values)
 - [FILTER OUT FALSY VALUES](#filter-out-falsy-values)
 - [REQUIRED PARAMETERS](#required-parameters)
+- [PASS AN EMPTY PARAMETER](#pass-an-empty-parameter)
 
 # OPTIONAL CHAINING
 
@@ -186,4 +187,38 @@ const greet = (name = required()) => console.log(`Hello ${name}!`);
 
 greet() // Returns "Uncaught TypeError: You did not pass the required argument!"
 greet("Catalin Pit") // Returns "Hello Catalin Pit!"
+```
+
+# PASS AN EMPTY PARAMETER 
+
+With the help of the spread syntax, we can now pass an empty parameter to a function. 
+
+"Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
+
+```
+function greet(fullName, instagramHandle, twitterHandle) {
+    let message = `Hello, my name is ${fullName}.`;
+
+    if (instagramHandle) {
+        message += ` My Instagram handle is ${instagramHandle}.`;
+    }
+
+    if (twitterHandle) {
+        message += ` My Twitter handle is ${twitterHandle}.`;
+    }
+
+    return message;
+}
+
+// Returns "Hello, my name is Catalin Pit."
+console.log(greet("Catalin Pit")); 
+
+// Returns "Hello, my name is Catalin Pit. My Instagram handle is @cpit. My Twitter handle is @catapit." 
+console.log(greet("Catalin Pit", "@cpit", "@catapit")); 
+
+// Returns "Hello, my name is Catalin Pit. My Twitter handle is @cpit."
+greet(...['Catalin Pit', , '@cpit']);
+
+// Returns "Hello, my name is Catalin Pit. My Instagram handle is @catapit."
+greet(...['Catalin Pit', '@catapit']);
 ```
