@@ -19,6 +19,7 @@ I add things as I discover them.
 - [FILTER OUT FALSY VALUES](#filter-out-falsy-values)
 - [REQUIRED PARAMETERS](#required-parameters)
 - [PASS AN EMPTY PARAMETER](#pass-an-empty-parameter)
+- [ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION](#accept-any-number-of-arguments-in-a-function)
 
 # OPTIONAL CHAINING
 
@@ -221,4 +222,27 @@ greet(...['Catalin Pit', , '@cpit']);
 
 // Returns "Hello, my name is Catalin Pit. My Instagram handle is @catapit."
 greet(...['Catalin Pit', '@catapit']);
+```
+
+# ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION
+
+We are making use of the spread operator again to accept any number of arguments in a function. 
+
+```js
+function accumulator(...args) {
+  let acc = 0;
+
+  for (let val of args) {
+    acc += val;
+  }
+
+  return acc;
+}
+
+accumulator() // Outputs 0
+accumulator(5) // Outputs 5
+accumulator(1, 5) // Outputs 6
+accumulator(5, 9, 3) // Outputs 17
+accumulator(1, 9, 2, 8) // Outputs 20
+accumulator(8, 1, 9, 2, 1000) // Outputs 1020
 ```
