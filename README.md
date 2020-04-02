@@ -21,6 +21,7 @@ I add things as I discover them.
 - [PASS AN EMPTY PARAMETER](#pass-an-empty-parameter)
 - [ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION](#accept-any-number-of-arguments-in-a-function)
 - [CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION](#check-if-every-item-from-an-array-passes-a-test-condition)
+- [FACTORIAL WITH RECURSIVE FUNCTION](#factorial-with-recursive-function)
 
 # OPTIONAL CHAINING
 
@@ -264,4 +265,21 @@ function doYouWorkFromHome(answer) {
 closeOffice.every(doYouWorkFromHome);   // Returns false - We don't close the office
 closeOffice2.every(doYouWorkFromHome);  // Returns true - We close the office
 closeOffice3.every(doYouWorkFromHome);  // Returns false - We don't close the office
+```
+
+# FACTORIAL WITH RECURSIVE FUNCTION
+
+"In programming terms a recursive function can be defined as a routine that calls itself directly or indirectly." (Source: [Geek for Geeks](https://www.geeksforgeeks.org/recursive-functions/))
+
+```js
+function factorial(number) {
+	if (number == 0)
+		return 1;
+
+	return number * factorial(number - 1);
+}
+
+factorial(7); // Returns 5040 || 7!
+factorial(3); // Returns 6 || 3!
+factorial(0); // Returns 1
 ```
