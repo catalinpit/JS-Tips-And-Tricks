@@ -20,6 +20,7 @@ I add things as I discover them.
 - [REQUIRED PARAMETERS](#required-parameters)
 - [PASS AN EMPTY PARAMETER](#pass-an-empty-parameter)
 - [ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION](#accept-any-number-of-arguments-in-a-function)
+- [CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION](#check-if-every-item-from-an-array-passes-a-test-condition)
 
 # OPTIONAL CHAINING
 
@@ -226,7 +227,7 @@ greet(...['Catalin Pit', '@catapit']);
 
 # ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION
 
-We are making use of the spread operator again to accept any number of arguments in a function. 
+We are making use of the spread operator again to accept any number of arguments in a function.
 
 ```js
 function accumulator(...args) {
@@ -245,4 +246,22 @@ accumulator(1, 5) // Outputs 6
 accumulator(5, 9, 3) // Outputs 17
 accumulator(1, 9, 2, 8) // Outputs 20
 accumulator(8, 1, 9, 2, 1000) // Outputs 1020
+```
+
+# CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION
+
+"The `every()` method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every))
+
+```js
+let closeOffice = ['false', 'true', 'false', 'true'];
+let closeOffice2 = ['true', 'true', 'true', 'true'];
+let closeOffice3 = ['false', 'false', 'false', 'false'];
+
+function doYouWorkFromHome(answer) {
+	return answer == 'true';
+}
+
+closeOffice.every(doYouWorkFromHome);   // Returns false - We don't close the office
+closeOffice2.every(doYouWorkFromHome);  // Returns true - We close the office
+closeOffice3.every(doYouWorkFromHome);  // Returns false - We don't close the office
 ```
