@@ -1,4 +1,4 @@
-# JavaScript Tips And Tricks  🔥🚀⚡
+# JAVASCRIPT TIPS & TRICKS  🔥🚀⚡
 A collection of JavaScript tips and tricks.
 
 No particular order or path.
@@ -8,7 +8,7 @@ I add things as I discover them.
 *Check [Codinghub.tips](https://codinghub.tips/), too, for JavaScript tips. It's not my project but I like it.* 🔥
 
 # TABLE OF CONTENTS
-- [JavaScript Tips And Tricks  🔥🚀⚡](#javascript-tips-and-tricks-%f0%9f%94%a5%f0%9f%9a%80%e2%9a%a1)
+- [JAVASCRIPT TIPS & TRICKS  🔥🚀⚡](#javascript-tips--tricks-%f0%9f%94%a5%f0%9f%9a%80%e2%9a%a1)
 - [TABLE OF CONTENTS](#table-of-contents)
 - [OPTIONAL CHAINING](#optional-chaining)
 - [NULLISH COALESCING OPERATOR](#nullish-coalescing-operator)
@@ -258,7 +258,7 @@ let closeOffice2 = ['true', 'true', 'true', 'true'];
 let closeOffice3 = ['false', 'false', 'false', 'false'];
 
 function doYouWorkFromHome(answer) {
-	return answer == 'true';
+  return answer == 'true';
 }
 
 closeOffice.every(doYouWorkFromHome);   // Returns false - We don't close the office
