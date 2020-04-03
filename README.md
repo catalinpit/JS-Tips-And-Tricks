@@ -21,6 +21,7 @@ I add things as I discover them.
 - [PASS AN EMPTY PARAMETER](#pass-an-empty-parameter)
 - [ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION](#accept-any-number-of-arguments-in-a-function)
 - [CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION](#check-if-every-item-from-an-array-passes-a-test-condition)
+- [CHECK IF SOME ITEMS FROM AN ARRAY PASS A TEST CONDITION](#check-if-some-items-from-an-array-pass-a-test-condition)
 
 # OPTIONAL CHAINING
 
@@ -264,4 +265,22 @@ function doYouWorkFromHome(answer) {
 closeOffice.every(doYouWorkFromHome);   // Returns false - We don't close the office
 closeOffice2.every(doYouWorkFromHome);  // Returns true - We close the office
 closeOffice3.every(doYouWorkFromHome);  // Returns false - We don't close the office
+```
+
+# CHECK IF SOME ITEMS FROM AN ARRAY PASS A TEST CONDITION
+
+"The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some))
+
+```js
+let devTeam = ['junior', 'middle', 'middle', 'junior', 'senior', 'senior'];
+let devTeam1 = ['junior', 'middle', 'middle', 'junior', 'junior', 'middle'];
+let devTeam2 = ['junior', 'middle', 'middle', 'junior', 'senior', 'junior'];
+
+function proceedWithProject(answer) {
+	return answer == 'senior'; 
+}
+
+devTeam.some(proceedWithProject);    // Returns true - We can proceed with the project
+devTeam1.some(proceedWithProject);   // Returns false - We cannot proceed with the project
+devTeam2.some(proceedWithProject);   // Returns true - We can proceed with the project
 ```
