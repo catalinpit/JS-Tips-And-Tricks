@@ -277,7 +277,7 @@ let devTeam1 = ['junior', 'middle', 'middle', 'junior', 'junior', 'middle'];
 let devTeam2 = ['junior', 'middle', 'middle', 'junior', 'senior', 'junior'];
 
 function proceedWithProject(answer) {
-	return answer == 'senior'; 
+  return answer == 'senior';
 }
 
 devTeam.some(proceedWithProject);    // Returns true - We can proceed with the project
