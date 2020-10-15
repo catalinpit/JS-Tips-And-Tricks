@@ -40,7 +40,7 @@ const person = {
 };
 
 if (person && person.socialMedia && person.socialMedia.twitter) {
-  console.log(person.socialMedia.twitter);
+  console.log(person.socialMedia.twitter); // outputs @catalinmpit
 }
 
 // The same thing with optional chaining
@@ -49,7 +49,7 @@ if (person?.socialMedia?.twitter) {
 }
 
 // or
-console.log(person?.socialMedia?.twitter);
+console.log(person?.socialMedia?.twitter); // outputs @catalinmpit
 ```
 
 # NULLISH COALESCING OPERATOR
@@ -126,7 +126,7 @@ const firstName = "Catalin";
 const firstNameArr1 = firstName.split('');
 console.log(firstNameArr1);
 
-const firstNameArr2 = [...firstName];
+const firstNameArr2 = [...firstName]; // using the spread operator
 console.log(firstNameArr2);
 ```
 
